@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="393*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"></ColumnDefinition>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="132*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="136,0" Width="124" Grid.ColumnSpan="2">Запись на тур</TextBlock>
+         <ScrollViewer Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
+            <StackPanel>
+                <Button>Добавить клиента</Button>
+                <GroupBox Header="Выберите клиента:">
+                    <ComboBox></ComboBox>
+                </GroupBox>
+                <GroupBox Header="Выберите тур:">
+                    <ComboBox></ComboBox>
+                </GroupBox>
+                <GroupBox Header="Выберите дату начала">
+                    <ComboBox></ComboBox>
+                </GroupBox>
+               
+                <GroupBox Header="Выберите город">
+                    <ComboBox></ComboBox>
+                </GroupBox>
+                <GroupBox Header="Выберите гостиницу">
+                    <ComboBox></ComboBox>
+                </GroupBox>
+              
+                <GroupBox Header="Сумма поездки:">
+                    <TextBox Name="TBsumm" Text="Здесь будет результат"/>
+                </GroupBox>
+               
+                <Button Name="BtnWrite" Click="BtnWrite_Click">Записать данные</Button>
+                <Button Name="BtnShow" Click="BtnShow_Click">Перети к просмотру</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
